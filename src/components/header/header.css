@@ -1,0 +1,18 @@
+.bg-body-tertiary{
+    background-color: #ffce48 !important;
+}
+
+.imagen-hover{
+    width: 70px;
+    height: 70px;
+    background-image: url(../../assets/Logo/LogoInicio.png);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    transition: all .5s ease;
+}
+
+.imagen-hover:hover{
+    background-image: url(../../assets/Logo/Logo.png);
+    rotate: 360deg;
+}
