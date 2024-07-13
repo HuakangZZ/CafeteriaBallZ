@@ -7,6 +7,18 @@
     background-repeat: no-repeat;
 }
 
+@media (max-width: 1080px) {
+    .contacto-container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        background-image: linear-gradient(rgba(255, 153, 0, 0.5), rgba(255, 153, 0, 0.5)), url(../../assets/namekusei.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        align-items: center;
+    }
+}
+
 .contacto-container ul{
     list-style: none;
 }
@@ -33,4 +45,18 @@
 .lista{
     font-size: 25px;
     color: rgb(255, 255, 255);
+}
+
+.container-radar{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1080px) {
+    .container-radar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

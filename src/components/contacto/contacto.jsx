@@ -14,7 +14,7 @@ function Contacto(){
                    <li><b>Horarios:</b> 8:00 am | 22:00 pm</li>
                    <li><b>Email:</b> cafeballz@gmail.com</li>
                </ul>
-               <div>
+               <div className="container-radar">
                    <img className="radar" src={radar} alt="" />
                    <img className="radar" src={flecha} alt="" />
                </div>
