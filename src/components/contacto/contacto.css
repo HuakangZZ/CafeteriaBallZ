@@ -1,0 +1,36 @@
+.contacto-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    background-image: linear-gradient(rgba(255, 153, 0, 0.5), rgba(255, 153, 0, 0.5)), url(../../assets/namekusei.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contacto-container ul{
+    list-style: none;
+}
+
+.texto-container{
+    width: 50%;
+    text-align: center;
+}
+
+
+.iframe-container{
+    margin: 0px auto;
+}
+
+.radar{
+    width: 200px;
+}
+
+.titulo{
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+}
+
+.lista{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
