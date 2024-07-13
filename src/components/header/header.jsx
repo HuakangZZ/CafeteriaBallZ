@@ -23,9 +23,9 @@ function Header() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action2">CONTACTO</Nav.Link>
-              <Nav.Link href="#action2">CARTA/MENU</Nav.Link>
-              <Nav.Link href="#action2">NIVEL DE PODER</Nav.Link>
+              <Nav.Link href="#contacto">CONTACTO</Nav.Link>
+              <Nav.Link href="#menu">CARTA/MENU</Nav.Link>
+              <Nav.Link href="">NIVEL DE PODER</Nav.Link>
             
             </Nav>
             <Form className="d-flex">

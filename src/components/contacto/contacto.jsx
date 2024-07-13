@@ -4,7 +4,7 @@ import flecha from "../../assets/contacto/flecha.gif"
 
 function Contacto(){
     return (
-        <div className="contacto-container">
+        <div className="contacto-container" id="contacto">
             <div className="texto-container">
                <h2 className="titulo">CONTACTO</h2>
                <ul className="lista">
@@ -16,12 +16,12 @@ function Contacto(){
                </ul>
                <div className="container-radar">
                    <img className="radar" src={radar} alt="" />
-                   <img className="radar" src={flecha} alt="" />
+                   <img className="radar girar" src={flecha} alt="" id="flechaEle"/>
                </div>
                
             </div>
             <div className="iframe-container">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nVuOMwwKevWaV1PMFqCzhROuW5U7C-E&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                <iframe className="iframe-map" src="https://www.google.com/maps/d/u/0/embed?mid=1nVuOMwwKevWaV1PMFqCzhROuW5U7C-E&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
             </div>
         </div>
     );

@@ -28,9 +28,28 @@
     text-align: center;
 }
 
+@media (max-width: 570px) {
+    .texto-container{
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 .iframe-container{
-    margin: 0px auto;
+    width: 45%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1080px) {
+    .iframe-container{
+        width: 80%;
+        margin: 0;
+    }
+}
+
+.iframe-map{
+    width: 100%;
 }
 
 .radar{
@@ -58,5 +77,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.girar{
+    rotate: 0deg;
+}
+
+@media (max-width: 1080px) {
+    .girar{
+        rotate: 90deg;
     }
 }

@@ -16,7 +16,9 @@ function Menu(){
             setContador(contador - 1);
         }
     }
-
+    const clw = () => {
+        console.log(window.innerWidth)
+    }
     useEffect(() => {
         fetch("https://api.sampleapis.com/coffee/hot")
         .then((response) => response.json())
@@ -26,7 +28,7 @@ function Menu(){
 
 
     return(
-        <div className="grid">
+        <div className="grid" id="menu">
             {data?.map((item) => (
                 <Card key={item.id} className="card">
                     <Card.Img src={item.image} className="card-image"/>

@@ -1,0 +1,35 @@
+.lista-integrantes{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 750px) {
+    .lista-integrantes{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.esfera-nombre{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 750px) {
+    .esfera-nombre{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+    }
+}
+
+.footer-content{
+    background-image: url(../../assets/footer/gohan.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
+}
