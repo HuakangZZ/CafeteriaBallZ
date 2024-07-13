@@ -11,21 +11,21 @@ function Presentacion(){
           <div className="tamaño">
             <Carousel>
               <Carousel.Item>
-              <a href="https://www.youtube.com/watch?v=mR-qHyPmFm4" target="blank"><img src={cafeteria1} alt="" width="800" height="500"/></a>
+              <a href="https://www.youtube.com/watch?v=mR-qHyPmFm4" target="blank"><img src={cafeteria1} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA EN HURLINGAM</h3>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-              <a href="https://www.youtube.com/watch?v=rjJFpeWdJvE" target="blank"><img src={cafeteria2} alt="" width="800" height="500"/></a>
+              <a href="https://www.youtube.com/watch?v=rjJFpeWdJvE" target="blank"><img src={cafeteria2} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA MORENO</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-              <a href="https://www.youtube.com/watch?v=yRdGJj68nwA" target="blank"><img src={cafeteria3} alt="" width="800" height="500"/></a>
+              <a href="https://www.youtube.com/watch?v=yRdGJj68nwA" target="blank"><img src={cafeteria3} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA SAN MIGUEL</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

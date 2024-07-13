@@ -1,6 +1,5 @@
 .tamaño{
-    width:800px !important;
-    height: 500px !important;
+    width:100% !important;
 }
 
 .nosotros{
@@ -10,6 +9,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 0 20px 0;
+}
+
+@media (max-width:1200) {
+    .nosotros{
+        width: 100%;
+        background: rgb(255,158,0);
+        background: linear-gradient(7deg, rgba(255,158,0,1) 0%, rgba(255,85,0,1) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
 
 .flex{
@@ -17,7 +29,7 @@
     flex-direction: row;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 1200px) {
     .flex{
         display: flex;
         flex-direction: column;
@@ -25,7 +37,13 @@
 }
 
 .imagen{
-    width: 300px;
+    width: 100% !important;
+}
+
+@media (max-width: 1200px) {
+    .imagen{
+        width: 700px;
+    }
 }
 
 .titulo-nosotros{
@@ -37,4 +55,12 @@
     font-size: 20px;
     color: white;
     margin: 0 20px;
+}
+
+@media (min-width: 1200px) {
+    .texto-nosotros{
+        font-size: 17px;
+        color: white;
+        margin: 0 20px;
+    }
 }
