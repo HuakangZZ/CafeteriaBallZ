@@ -24,6 +24,10 @@
     }
 }
 
+.separacion{
+    padding-top: 95px;
+}
+
 .flex{
     display: flex;
     flex-direction: row;

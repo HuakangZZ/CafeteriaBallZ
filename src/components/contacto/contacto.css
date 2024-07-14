@@ -58,12 +58,19 @@
 
 .titulo{
     font-size: 70px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 36, 136);
+}
+
+@media (max-width:350px) {
+    .titulo{
+        font-size: 50px;
+        color: rgb(0, 36, 136);
+    }
 }
 
 .lista{
     font-size: 25px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 36, 136);
 }
 
 .container-radar{

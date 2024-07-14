@@ -1,5 +1,8 @@
 .bg-body-tertiary{
     background-color: #ffce48 !important;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
 }
 
 .imagen-hover{

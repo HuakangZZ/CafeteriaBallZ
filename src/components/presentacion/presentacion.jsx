@@ -7,7 +7,7 @@ import './presentacion.css'
 
 function Presentacion(){
     return(
-      <div className="flex">
+      <div className="flex separacion">
           <div className="tamaño">
             <Carousel>
               <Carousel.Item>

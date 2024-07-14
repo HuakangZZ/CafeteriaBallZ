@@ -15,6 +15,10 @@
 
 .esfera-nombre{
     text-align: center;
+    color: rgb(0, 36, 136);
+}
+
+.franco-diego{
     color: white;
 }
 
@@ -24,6 +28,9 @@
         align-items: center;
         justify-content: space-evenly;
         color: white;
+    }
+    .franco-diego{
+        color: rgb(0, 36, 136);
     }
 }
 

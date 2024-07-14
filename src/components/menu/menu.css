@@ -3,8 +3,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     padding: 100px;
+}
+
+.titulo-menu{
+    font-size: 70px;
+}
+
+.contenedor-menu{
     background: rgb(255,158,0);
     background: linear-gradient(7deg, rgba(255,158,0,1) 0%, rgba(255,85,0,1) 100%);
+    padding-top: 50px;
+    text-align: center;
 }
 
 @media (max-width:1150px) {
@@ -60,4 +69,21 @@
     justify-content: center;
     margin: 0;
     border-radius: 5px;
+}
+
+.contenedor-titulo{
+    display: flex;
+    justify-content: center;
+    margin-left: -200px;
+    align-items: center;
+}
+
+@media (max-width:750px) {
+    .contenedor-titulo{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
 }
