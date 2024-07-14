@@ -19,14 +19,16 @@ function App() {
     establecerPrecio(datosTotalPrecio)
   }
 
-  const listaDeIds = (datos)
+  const listaDeIds = (datosIds) => {
+    establecerLista(datosIds)
+  }
 
   return (
     <div>
       <Header totalDeProducts={total} totalPrecios={precio} listaDeIds={lista}/> 
       <Presentacion/>
       <Contacto/>
-      <Menu totalDeProductos={totalDeProductos} totalPrecio={totalPrecio} totalActual={total} precioActual={precio} listaDeIds={lista}/>
+      <Menu totalDeProductos={totalDeProductos} totalPrecio={totalPrecio} listaDeIds={listaDeIds} totalActual={total} precioActual={precio} listaActual={lista}/>
       <Footer/>
     </div>
   )

@@ -51,7 +51,6 @@ function Header({totalDeProducts, totalPrecios, listaDeIds}) {
                   placeholder="Buscar"
                   className="me-2"
                   aria-label="Buscar"
-                  onClick={console.log(totalPrecios)}
                 />
                 <Button variant="outline-success">Buscar</Button>
               </Form>

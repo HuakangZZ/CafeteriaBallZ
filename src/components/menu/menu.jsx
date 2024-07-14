@@ -4,11 +4,76 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import goku from '../../assets/menu/goku.gif'
 
-function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeIds}){
+function tieneAlguno(params,listaIds) {
+    let valor = false
+    listaIds.forEach(x => {
+        if (params[0] == x[0]) {
+            valor = true 
+        }
+    })
+    return valor
+}
+
+function ajustarValor(params,listaIds){
+    listaIds.forEach(x => {
+        if (params[0] == x[0]) {
+            x[1] = params[1] 
+        }
+    })
+}
+
+function sumar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProductos, totalPrecio, listaDeIds){
+    let totalProductos = totalActual;
+    let totalPrecios = precioActual;
+    
+    const elemento = document.getElementById(item.id);
+    let valor = Number(elemento.textContent)
+    elemento.textContent = valor + 1
+    totalProductos++
+    totalPrecios = totalPrecios + listaDePrecio[item.id - 1]
+    if (totalProductos > 0 && !tieneAlguno([item,valor+1],listaIds)) {
+        listaIds.push([item,valor+1])
+    }
+    else{
+        if(tieneAlguno([item,valor+1],listaIds)) {
+            ajustarValor([item,valor+1],listaIds)
+        }
+    }
+    console.log(listaIds)
+    totalDeProductos(totalProductos)
+    totalPrecio(totalPrecios)
+    listaDeIds(listaIds);
+}
+
+function restar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProductos, totalPrecio, listaDeIds){
+    let totalProductos = totalActual;
+    let totalPrecios = precioActual;
+    
+    const elemento = document.getElementById(item.id);
+    let valor = Number(elemento.textContent)
+    if (valor > 0) {
+        elemento.textContent = valor - 1
+        totalProductos--
+        totalPrecios = totalPrecios - listaDePrecio[item.id - 1]
+        if(tieneAlguno([item,valor+1],listaIds)) {
+            ajustarValor([item,valor-1],listaIds)
+        }
+        if (tieneAlguno([item,valor-1],listaIds) && Number(elemento.textContent) == 0){
+            let indice = listaIds.filter(itemazo => itemazo[0] != item);
+            listaDeIds(indice);
+        }   
+        totalDeProductos(totalProductos)
+        totalPrecio(totalPrecios)
+    }
+    
+}
+
+
+
+function Menu({totalDeProductos, totalPrecio, listaDeIds, totalActual, precioActual, listaActual}){
     const [data, setData] = useState(null);
     let contadorId = 0;
-    let totalProductos = totalActual;
-    let totalPrecios = precioActual
+    let listaIds = listaActual;
 
     const generarId = () => {
         contadorId++
@@ -18,6 +83,18 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeI
     const clw = () => {
         console.log(window.innerWidth)
     }
+
+    function noLoContiene(params) {
+        listaIds.forEach(x => {
+            let valor = true
+            if (x[0] == params) {
+                valor = false
+            }
+            return valor;
+        })
+
+    }
+
     useEffect(() => {
         fetch("https://api.sampleapis.com/coffee/hot")
         .then((response) => response.json())
@@ -42,14 +119,7 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeI
                             <div className="contenedor-contador">
 
                                 <Button className="boton" onClick={() => {
-                                    const elemento = document.getElementById(item.id);
-                                    let valor = Number(elemento.textContent)
-                                    elemento.textContent = valor + 1
-                                    totalProductos = totalProductos + 1
-                                    totalPrecios = totalPrecios + listaDePrecio[item.id - 1]
-                                    totalDeProductos(totalProductos)
-                                    totalPrecio(totalPrecios)
-                                    listaDeIds.push(item.id)
+                                    sumar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProductos, totalPrecio, listaDeIds)
                                 }}>+</Button>
 
 
@@ -57,7 +127,8 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeI
 
 
                                 <Button className="boton" onClick={() => {
-                                    const elemento = document.getElementById(item.id);
+                                    restar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProductos, totalPrecio, listaDeIds)
+                                   /* const elemento = document.getElementById(item.id);
                                     let valor = Number(elemento.textContent)
                                     if (valor > 0) {
                                         elemento.textContent = valor - 1
@@ -65,7 +136,13 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeI
                                         totalPrecios = totalPrecios - listaDePrecio[item.id - 1]
                                         totalDeProductos(totalProductos)
                                         totalPrecio(totalPrecios)
-                                    }
+                                        if (listaIds.includes(item) && Number(elemento.textContent) == 0){
+                                            let indice = listaIds.filter(itemazo => itemazo != item)
+                                            listaDeIds(indice);
+                                        }
+                                        
+                                        
+                                    }*/
                                 }}>-</Button>
 
 
