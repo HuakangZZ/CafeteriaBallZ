@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import goku from '../../assets/menu/goku.gif'
 
-function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
+function Menu({totalDeProductos, totalPrecio, totalActual, precioActual,listaDeIds}){
     const [data, setData] = useState(null);
     let contadorId = 0;
     let totalProductos = totalActual;
@@ -49,6 +49,7 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
                                     totalPrecios = totalPrecios + listaDePrecio[item.id - 1]
                                     totalDeProductos(totalProductos)
                                     totalPrecio(totalPrecios)
+                                    listaDeIds.push(item.id)
                                 }}>+</Button>
 
 

@@ -10,6 +10,8 @@ function App() {
   const [total, establecerTotal] = useState(0);
   const [precio, establecerPrecio] = useState(0);
 
+  const lista = []
+
   const totalDeProductos = (datosTotalDeProductos) =>{
     establecerTotal(datosTotalDeProductos)
   }
@@ -19,10 +21,10 @@ function App() {
 
   return (
     <div>
-      <Header totalDeProducts={total} totalPrecios={precio}/> 
+      <Header totalDeProducts={total} totalPrecios={precio} listaDeIds={lista}/> 
       <Presentacion/>
       <Contacto/>
-      <Menu totalDeProductos={totalDeProductos} totalPrecio={totalPrecio} totalActual={total} precioActual={precio} />
+      <Menu totalDeProductos={totalDeProductos} totalPrecio={totalPrecio} totalActual={total} precioActual={precio} listaDeIds={lista}/>
       <Footer/>
     </div>
   )
