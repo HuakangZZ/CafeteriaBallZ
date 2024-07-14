@@ -7,10 +7,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/UNAHUR-1.png'
+import { FaShoppingCart } from "react-icons/fa";
 
-function Header() {
+function Header({totalDeProducts, totalPrecios}) {
+  let totalProductos = totalDeProducts
+  let totalPrecio = totalPrecios
+
     return (
-      
       <Navbar expand="lg" className="bg-body-tertiary" style={{backgroundColor: "#7EFBD1"}}>
         <Container fluid>
           <Navbar.Brand href="../../index.html">
@@ -23,11 +26,18 @@ function Header() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#contacto">CONTACTO</Nav.Link>
-              <Nav.Link href="#menu">CARTA/MENU</Nav.Link>
-              <Nav.Link href="">NIVEL DE PODER</Nav.Link>
-            
+              <div className='flex-header'>
+                <Nav.Link href="#contacto">CONTACTO</Nav.Link>
+                <Nav.Link href="#menu">CARTA/MENU</Nav.Link>
+                <Nav.Link href="">NIVEL DE PODER</Nav.Link>
+              </div>
             </Nav>
+            <div className='contenedor-shopping-cart'>
+              <div className='burbujita'>
+                <p>{totalProductos}</p>
+              </div>
+              <FaShoppingCart className='shopping-cart'/>
+            </div>
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -39,6 +49,7 @@ function Header() {
             </Form>
           </Navbar.Collapse>
         </Container>
+        
       </Navbar>
     )
 }

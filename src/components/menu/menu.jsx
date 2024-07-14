@@ -4,27 +4,17 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import goku from '../../assets/menu/goku.gif'
 
-function Menu(){
+function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
     const [data, setData] = useState(null);
+    let contadorId = 0;
+    let totalProductos = totalActual;
+    let totalPrecios = 0
 
-    const crearContador = () =>{
-        let contador = 0
-        return contador
+    const generarId = () => {
+        contadorId++
+        return contadorId.toString();
     }
 
-    const sumar = (item) => {
-        const contator = document.getElementById(item);
-        let valor = Number(contator.textContent);
-        contator.textContent = valor + 1
-    }
-
-    const restar = (item) => {
-        const contator = document.getElementById(item);
-        let valor = Number(contator.textContent);
-        if (valor > 0) {
-            contator.textContent = valor - 1
-        }
-    }
     const clw = () => {
         console.log(window.innerWidth)
     }
@@ -50,9 +40,31 @@ function Menu(){
                             <Card.Text>{item.description}</Card.Text>
                             <Card.Text><b>Precio:</b>$ {listaDePrecio[item.id - 1]}</Card.Text>
                             <div className="contenedor-contador">
-                                <Button className="boton" onClick={sumar(item.id)}>+</Button>
-                                <p className="contador" id={item.id}>{0}</p>
-                                <Button className="boton" onClick={restar(item.id)}>-</Button>
+
+                                <Button className="boton" onClick={() => {
+                                    const elemento = document.getElementById(item.id);
+                                    let valor = Number(elemento.textContent)
+                                    elemento.textContent = valor + 1
+                                    totalProductos = totalProductos + 1
+                                    totalDeProductos(totalProductos)
+                                }}>+</Button>
+
+
+                                <p className="contador" id={generarId()}>{0}</p>
+
+
+                                <Button className="boton" onClick={() => {
+                                    const elemento = document.getElementById(item.id);
+                                    let valor = Number(elemento.textContent)
+                                    if (valor > 0) {
+                                        elemento.textContent = valor - 1
+                                        totalProductos = totalProductos - 1
+                                        totalDeProductos(totalProductos)
+                                    }
+                                }}>-</Button>
+
+
+
                             </div>
                         </Card.Body>
                     </Card>
