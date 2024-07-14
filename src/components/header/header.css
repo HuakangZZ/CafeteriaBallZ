@@ -50,3 +50,7 @@
     position: absolute;
     z-index: 10000000;
 }
+
+.boton-header{
+    all: unset;
+}

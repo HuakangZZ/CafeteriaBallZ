@@ -32,18 +32,22 @@ function Header({totalDeProducts, totalPrecios}) {
                 <Nav.Link href="">NIVEL DE PODER</Nav.Link>
               </div>
             </Nav>
-            <div className='contenedor-shopping-cart'>
-              <div className='burbujita'>
-                <p>{totalProductos}</p>
+            <button className='boton-header'>
+              <div className='contenedor-shopping-cart'>
+                <div className='burbujita'>
+                  <p>{totalProductos}</p>
+                </div>
+                <FaShoppingCart className='shopping-cart'/>
               </div>
-              <FaShoppingCart className='shopping-cart'/>
-            </div>
+            </button>
+            
             <Form className="d-flex">
               <Form.Control
                 type="search"
                 placeholder="Buscar"
                 className="me-2"
                 aria-label="Buscar"
+                onClick={console.log(totalPrecios)}
               />
               <Button variant="outline-success">Buscar</Button>
             </Form>

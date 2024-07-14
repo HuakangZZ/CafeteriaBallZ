@@ -8,7 +8,7 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
     const [data, setData] = useState(null);
     let contadorId = 0;
     let totalProductos = totalActual;
-    let totalPrecios = 0
+    let totalPrecios = precioActual
 
     const generarId = () => {
         contadorId++
@@ -46,7 +46,9 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
                                     let valor = Number(elemento.textContent)
                                     elemento.textContent = valor + 1
                                     totalProductos = totalProductos + 1
+                                    totalPrecios = totalPrecios + listaDePrecio[item.id - 1]
                                     totalDeProductos(totalProductos)
+                                    totalPrecio(totalPrecios)
                                 }}>+</Button>
 
 
@@ -59,7 +61,9 @@ function Menu({totalDeProductos, totalPrecio, totalActual, precioActual}){
                                     if (valor > 0) {
                                         elemento.textContent = valor - 1
                                         totalProductos = totalProductos - 1
+                                        totalPrecios = totalPrecios - listaDePrecio[item.id - 1]
                                         totalDeProductos(totalProductos)
+                                        totalPrecio(totalPrecios)
                                     }
                                 }}>-</Button>
 
