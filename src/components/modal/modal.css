@@ -9,3 +9,8 @@
 .fondo{
     background-image: url(../../assets/nosotros/shenlong.gif) !important;
 }
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: row;
+}
