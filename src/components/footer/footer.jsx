@@ -15,7 +15,7 @@ function Footer() {
                 </div>
                 <div className="esfera-nombre franco-diego">
                     <img src={esfera2} alt=""  width="50"/>
-                    <li><b>Nombre:</b> Diego Matallana, <b>Dni:</b> 42690092</li>
+                    <li><b>Nombre:</b> Hernan Cardachi, <b>Dni:</b> 25970424</li>
                 </div>
                 <div className="esfera-nombre">
                     <img src={esfera2} alt=""  width="50"/>

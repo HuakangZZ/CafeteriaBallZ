@@ -23,27 +23,25 @@ function Header({totalDeProducts, totalPrecios, listaDeIds}) {
             <Navbar.Brand href="../../index.html">
             <div className='imagen-hover'></div>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-              >
-                <div className='flex-header'>
-                  <Nav.Link href="#contacto">CONTACTO</Nav.Link>
-                  <Nav.Link href="#menu">CARTA/MENU</Nav.Link>
-                  <Nav.Link href="">NIVEL DE PODER</Nav.Link>
-                </div>
-              </Nav>
-              <button className='boton-header' onClick={() => setModalShow(true)}>
+            <button className='boton-header' onClick={() => setModalShow(true)}>
                 <div className='contenedor-shopping-cart'>
                   <div className='burbujita'>
                     <p>{totalProductos}</p>
                   </div>
                   <FaShoppingCart className='shopping-cart'/>
                 </div>
-              </button>
+            </button>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+              <Nav
+                className="me-auto my-2 my-lg-0"
+                navbarScroll
+              >
+                <div className='flex-header'>
+                  <Nav.Link href="#contacto" className='enlace'>CONTACTO</Nav.Link>
+                  <Nav.Link href="#menu" className='enlace'>CARTA/MENU</Nav.Link>
+                </div>
+              </Nav>
               
               <Form className="d-flex">
                 <Form.Control
