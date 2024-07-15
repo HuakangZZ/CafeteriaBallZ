@@ -128,21 +128,6 @@ function Menu({totalDeProductos, totalPrecio, listaDeIds, totalActual, precioAct
 
                                 <Button className="boton" onClick={() => {
                                     restar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProductos, totalPrecio, listaDeIds)
-                                   /* const elemento = document.getElementById(item.id);
-                                    let valor = Number(elemento.textContent)
-                                    if (valor > 0) {
-                                        elemento.textContent = valor - 1
-                                        totalProductos = totalProductos - 1
-                                        totalPrecios = totalPrecios - listaDePrecio[item.id - 1]
-                                        totalDeProductos(totalProductos)
-                                        totalPrecio(totalPrecios)
-                                        if (listaIds.includes(item) && Number(elemento.textContent) == 0){
-                                            let indice = listaIds.filter(itemazo => itemazo != item)
-                                            listaDeIds(indice);
-                                        }
-                                        
-                                        
-                                    }*/
                                 }}>-</Button>
 
 
