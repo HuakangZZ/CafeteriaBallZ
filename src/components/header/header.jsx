@@ -64,6 +64,7 @@ function Header({totalDeProducts, totalPrecios, listaDeIds}) {
         totalDeProductos = {totalDeProducts}
         totalDePrecios = {totalPrecio}
         listaDeIds = {listaDeIds}
+        className="margin-modal fondo"
       />
       </div>
       

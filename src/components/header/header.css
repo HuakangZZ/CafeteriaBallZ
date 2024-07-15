@@ -54,3 +54,16 @@
 .boton-header{
     all: unset;
 }
+
+.margin-modal{
+    padding-top: 100px !important;
+    overflow: auto !important;
+}
+
+.fondo{
+    padding-top: 100px !important;
+    background-image: url(../../assets/nosotros/shenlong.gif) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

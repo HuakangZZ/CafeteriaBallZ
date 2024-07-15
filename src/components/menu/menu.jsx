@@ -31,12 +31,12 @@ function sumar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDeProd
     elemento.textContent = valor + 1
     totalProductos++
     totalPrecios = totalPrecios + listaDePrecio[item.id - 1]
-    if (totalProductos > 0 && !tieneAlguno([item,valor+1],listaIds)) {
-        listaIds.push([item,valor+1])
+    if (totalProductos > 0 && !tieneAlguno([item,valor+1,listaDePrecio[item.id - 1]],listaIds)) {
+        listaIds.push([item,valor+1,listaDePrecio[item.id - 1]])
     }
     else{
         if(tieneAlguno([item,valor+1],listaIds)) {
-            ajustarValor([item,valor+1],listaIds)
+            ajustarValor([item,valor+1,listaDePrecio[item.id - 1]],listaIds)
         }
     }
     console.log(listaIds)
@@ -55,10 +55,10 @@ function restar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDePro
         elemento.textContent = valor - 1
         totalProductos--
         totalPrecios = totalPrecios - listaDePrecio[item.id - 1]
-        if(tieneAlguno([item,valor+1],listaIds)) {
-            ajustarValor([item,valor-1],listaIds)
+        if(tieneAlguno([item,valor+1,listaDePrecio[item.id - 1]],listaIds)) {
+            ajustarValor([item,valor-1,listaDePrecio[item.id - 1]],listaIds)
         }
-        if (tieneAlguno([item,valor-1],listaIds) && Number(elemento.textContent) == 0){
+        if (tieneAlguno([item,valor-1,listaDePrecio[item.id - 1]],listaIds) && Number(elemento.textContent) == 0){
             let indice = listaIds.filter(itemazo => itemazo[0] != item);
             listaDeIds(indice);
         }   
