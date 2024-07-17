@@ -32,14 +32,14 @@ function ModalPersonajes({nombre,...props}) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      className='fondo'
+      className='fondo-personajes'
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           PERSONAJE ELEGIDO
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className='fondo-body-modal'>
+      <Modal.Body className=''>
         <div>
           {data?.map( (personaje) =>{
             if (personaje.name.toLowerCase() == nombre) {

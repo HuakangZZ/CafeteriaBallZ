@@ -5,6 +5,7 @@ import goku from '../../assets/personajes/GokuUI.png'
 import krillin from '../../assets/personajes/Krilin.webp'
 import piccolo from '../../assets/personajes/piccolo.png'
 import yamcha from '../../assets/personajes/yamcha.webp'
+import './modal.css'
 import { BsBorderBottom } from 'react-icons/bs';
 
 function MyVerticallyCenteredModal({ totalDeProductos, totalDePrecios, listaDeIds, ...props }) {

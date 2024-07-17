@@ -6,6 +6,10 @@
     border-bottom: 1px solid gray !important;
 }
 
-.fondo{
-    background-image: url(../../assets/modal-personajes/tapion.gif) !important;
+.fondo-personajes{
+    padding-top: 100px;
+    background-image: url(../../assets/modal-personajes/tapion.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
