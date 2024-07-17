@@ -9,12 +9,25 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/UNAHUR-1.png'
 import { FaShoppingCart } from "react-icons/fa";
 import MyVerticallyCenteredModal from '../modal/modal';
+import ModalPersonajes from '../modal-personajes/modal-personajes';
 import React from 'react';
 
 function Header({totalDeProducts, totalPrecios, listaDeIds}) {
   let totalProductos = totalDeProducts
-  let totalPrecio = totalPrecios
+  let totalPrecio = totalPrecios 
+
   const [modalShow, setModalShow] = React.useState(false);
+  const [modalPersonajesShow, setModalPersonajesShow] = React.useState(false);
+  const [nombre, establecerNombre] = React.useState("")
+  const nombreCompleto = (datosNombreCompleto) => {
+    establecerNombre(datosNombreCompleto)
+  }
+
+  const reseteate = () =>{
+    const inputPers = document.getElementById("input-personajes")
+
+    inputPers.value = ""
+  }
 
     return (
       <div>
@@ -45,12 +58,17 @@ function Header({totalDeProducts, totalPrecios, listaDeIds}) {
               
               <Form className="d-flex">
                 <Form.Control
+                  id='input-personajes'
                   type="search"
-                  placeholder="Buscar"
+                  placeholder="--Busca un personaje--"
                   className="me-2"
-                  aria-label="Buscar"
+                  aria-label="Ej. Gohan"
+                  onChange={(e) => {
+                    nombreCompleto(e.target.value)
+                  }}
                 />
-                <Button variant="outline-success">Buscar</Button>
+                <Button variant="outline-success" onClick={()=>{setModalPersonajesShow(true);}}>Buscar
+                </Button>
               </Form>
             </Navbar.Collapse>
           </Container>
@@ -64,6 +82,14 @@ function Header({totalDeProducts, totalPrecios, listaDeIds}) {
         listaDeIds = {listaDeIds}
         className="margin-modal fondo"
       />
+
+      <ModalPersonajes
+      show={modalPersonajesShow}
+      onHide={() => {setModalPersonajesShow(false); reseteate()} }
+      nombre={nombre}
+      className="margin-modal fondo"
+      />
+      
       </div>
       
 

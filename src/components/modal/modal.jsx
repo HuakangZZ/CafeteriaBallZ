@@ -51,7 +51,7 @@ function MyVerticallyCenteredModal({ totalDeProductos, totalDePrecios, listaDeId
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className='fondo-body-modal'>
-        <div className='contenedor-carrito' style={{display:'flex', justifyContent:'space-evenly'}}>
+        <div style={{display:'flex', justifyContent:'space-evenly'}}>
           <div>
             {listaDeIds.map((item) => 
               (<div key={item[0].id} style={{borderBottom:"thin solid gray", marginTop:10}}>

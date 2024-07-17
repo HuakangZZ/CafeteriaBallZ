@@ -9,7 +9,6 @@ import { useState } from 'react'
 function App() {
   const [total, establecerTotal] = useState(0);
   const [precio, establecerPrecio] = useState(0);
-
   const [lista, establecerLista] = useState([])
 
   const totalDeProductos = (datosTotalDeProductos) =>{
@@ -18,7 +17,6 @@ function App() {
   const totalPrecio = (datosTotalPrecio) =>{
     establecerPrecio(datosTotalPrecio)
   }
-
   const listaDeIds = (datosIds) => {
     establecerLista(datosIds)
   }

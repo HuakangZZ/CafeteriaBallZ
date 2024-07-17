@@ -1,0 +1,11 @@
+.overflow{
+    overflow: auto;
+}
+
+.producto-contenedor{
+    border-bottom: 1px solid gray !important;
+}
+
+.fondo{
+    background-image: url(../../assets/modal-personajes/tapion.gif) !important;
+}
