@@ -89,6 +89,6 @@
     transition: all .5s ease;
 }
 .enlace:hover{
-    background-color: #ff5e01;
+    background-color: #ff5e0181;
     color: white;
 }

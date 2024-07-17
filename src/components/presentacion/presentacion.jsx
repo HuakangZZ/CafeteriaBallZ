@@ -14,21 +14,21 @@ function Presentacion(){
               <a href="https://www.youtube.com/watch?v=mR-qHyPmFm4" target="blank"><img src={cafeteria1} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA EN HURLINGAM</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <p>Tte. Manuel Origone 151, Villa Tesei, Provincia de Buenos Aires.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <a href="https://www.youtube.com/watch?v=rjJFpeWdJvE" target="blank"><img src={cafeteria2} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA MORENO</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Av. Bartolomé Mitre 1891, B1744OHC Moreno, Provincia de Buenos Aires.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
               <a href="https://www.youtube.com/watch?v=yRdGJj68nwA" target="blank"><img src={cafeteria3} alt="" className="imagen"/></a>
                 <Carousel.Caption>
                   <h3>CAFETERIA SAN MIGUEL</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Domingo Faustino Sarmiento 1551, San Miguel, Provincia de Buenos Aires.</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
