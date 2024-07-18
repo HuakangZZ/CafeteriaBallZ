@@ -8,7 +8,7 @@ import './presentacion.css'
 function Presentacion(){
     return(
       <div className="flex separacion">
-          <div className="tamaño">
+          <div className="tamaño fondo-de-carrusel">
             <Carousel>
               <Carousel.Item>
               <a href="https://www.youtube.com/watch?v=mR-qHyPmFm4" target="blank"><img src={cafeteria1} alt="" className="imagen"/></a>
@@ -37,10 +37,14 @@ function Presentacion(){
             <div></div>
             {/*<img src={nosotros} alt="" className="imagen"/>*/}
             <h2 className="titulo-nosotros">Nosotros</h2>
-            <p className="texto-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati modi, eius eos accusamus aliquid ea, dolorum totam impedit dolorem cumque, voluptatibus esse sint similique! Unde vel ratione dolor obcaecati atque!</p>
-            <p className="texto-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati modi, eius eos accusamus aliquid ea, dolorum totam impedit dolorem cumque, voluptatibus esse sint similique! Unde vel ratione dolor obcaecati atque!</p>
-            <p className="texto-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati modi, eius eos accusamus aliquid ea, dolorum totam impedit dolorem cumque, voluptatibus esse sint similique! Unde vel ratione dolor obcaecati atque!</p>
-            <p className="texto-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati modi, eius eos accusamus aliquid ea, dolorum totam impedit dolorem cumque, voluptatibus esse sint similique! Unde vel ratione dolor obcaecati atque!</p>
+            <p className="texto-nosotros">Hola a todos bienvenidos a nuestra cafeteria Online con tematica de Dragon ball.
+              Nuestra cafeteria se origino en Hurlingham pero ya nos expandimos, y tenemos varias sucursales en zonas cercanas
+              como San Miguel o Moreno.
+            </p>
+            <p className="texto-nosotros">La cafeteria fue una idea originaria de un trabajo entre compañeros universitarios (Patricio, Hernan, Franco y Diego), y hoy en dia podemos
+              decir que lo que una vez fue una mera idea hoy es una realidad y tambien nuestro trabajo. 
+            </p>
+
           </div>
       </div>
       

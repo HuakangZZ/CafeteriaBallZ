@@ -42,7 +42,7 @@ function ModalPersonajes({nombre,...props}) {
       <Modal.Body className=''>
         <div>
           {data?.map( (personaje) =>{
-            if (personaje.name.toLowerCase() == nombre) {
+            if (personaje.name.toLowerCase() == nombre.toLowerCase()) {
               return <div key={personaje.id}>
                 <h2>{personaje.name}</h2>
                 <p><b>KI:</b> {personaje.ki}</p>
