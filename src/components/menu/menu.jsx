@@ -3,6 +3,7 @@ import "./menu.css"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import goku from '../../assets/menu/goku.gif'
+import ModalIngredientes from "../modal-ingredientes/modal-ingredientes";
 
 function tieneAlguno(params,listaIds) {
     let valor = false
@@ -72,8 +73,17 @@ function restar(item,totalActual,precioActual,listaDePrecio,listaIds, totalDePro
 
 function Menu({totalDeProductos, totalPrecio, listaDeIds, totalActual, precioActual, listaActual}){
     const [data, setData] = useState(null);
+    const [modalIngredientesShow, setModalIngredientesShow] = useState(false);
+    const [valorProducto, setValorProducto] = useState(null)
     let contadorId = 0;
     let listaIds = listaActual;
+
+    const enviarItem = (valor) => {
+        setValorProducto(valor)
+        setModalIngredientesShow(true)
+
+    }
+
 
     const generarId = () => {
         contadorId++
@@ -111,7 +121,9 @@ function Menu({totalDeProductos, totalPrecio, listaDeIds, totalActual, precioAct
             <div className="grid" id="menu">
                 {data?.map((item) => (
                     <Card key={item.id} className="card">
-                        <Card.Img src={item.image} className="card-image"/>
+                        <a onClick={() => {enviarItem(item)}} className="enlace-ingredientes">
+                            <Card.Img src={item.image} className="card-image"/>
+                        </a>
                         <Card.Body className="card-body">
                             <Card.Title>{item.title}</Card.Title>
                             <Card.Text>{item.description}</Card.Text>
@@ -137,6 +149,13 @@ function Menu({totalDeProductos, totalPrecio, listaDeIds, totalActual, precioAct
                     </Card>
                 ))}
             </div>
+
+            <ModalIngredientes
+            itemValue = {valorProducto}
+            show={modalIngredientesShow}
+            onHide={() => {setModalIngredientesShow(false);} }
+            className="margin-modal"
+            />
         </div>
     );
 

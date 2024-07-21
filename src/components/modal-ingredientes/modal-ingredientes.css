@@ -1,0 +1,17 @@
+.overflow{
+    overflow: auto;
+}
+
+.producto-contenedor{
+    border-bottom: 1px solid gray !important;
+}
+
+.fondo-modal-ingredientes{
+    background-color: black 75% !important;
+}
+
+.body-ingredientes{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+}

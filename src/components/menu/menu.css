@@ -84,3 +84,12 @@
         width: 100%;
     }
 }
+
+.enlace-ingredientes{
+    cursor: pointer;
+}
+
+.modal-ingredientes{
+    justify-content: center;
+    align-items: center;
+}
